@@ -1,5 +1,6 @@
 {
   "resources": [
+    {"id":{"name":"Obj_Eliel","path":"objects/Obj_Eliel/Obj_Eliel.yy",},"order":0,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
   ],
   "Options": [
