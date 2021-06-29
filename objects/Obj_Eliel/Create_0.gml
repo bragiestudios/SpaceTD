@@ -6,3 +6,5 @@
 //É mentira o texto acima
 
 //Thiago otário
+
+//Eu não confirmo nem desconfirmo nada
