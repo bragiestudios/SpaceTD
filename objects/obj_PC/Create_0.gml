@@ -56,6 +56,7 @@
 			
 	
 	
+	
 	/*/Criar Particulas (estrelas):
 		randomize();
 		var _N_ = (os_browser=browser_not_a_browser) ? 50 : 25;
