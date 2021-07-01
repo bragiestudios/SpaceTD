@@ -1,48 +1,35 @@
 
 
 
+	//Genérico:
+		if id=inst_Atirador_Generico {exit;}
+		
 
-
-
-	//Persegição 
-		if instance_exists(Obj_Inimigo_Generico)
+		//DESENHAR NAVE:
+		switch(TIPO_NAVE)
 		{
-			var INIMIGO_MAIS_PROXIMO_DE_MIM = instance_nearest(x,y,Obj_Inimigo_Generico);
-			
-			var NO_RAIO_DE_ATAQUE = (point_distance(x,y,INIMIGO_MAIS_PROXIMO_DE_MIM.x,INIMIGO_MAIS_PROXIMO_DE_MIM.y)<ALCANCE) ? true : false;
-			
-			if NO_RAIO_DE_ATAQUE
-			{
-				var INIMIGO_MAIS_PROXIMO=INIMIGO_MAIS_PROXIMO_DE_MIM;
-				with(Obj_Inimigo_Generico)
-				{
-					if (point_distance(x,y,other.x,other.y)<other)
-					and y>INIMIGO_MAIS_PROXIMO.y
-					{
-						INIMIGO_MAIS_PROXIMO=self;
-					}
-				}
-			}
-			
+			//Nível 1:
+				case NAVE_ATIRADOR_0:
+					draw_sprite_ext(spr_Atirador_0,0,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha);
+					break;
+				
+			//Nível 2:
+				case NAVE_ATIRADOR_1_AGUA:
+					draw_sprite_ext(spr_Atirador_1,0,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha);
+					break;
+				
 
+				case NAVE_ATIRADOR_1_AR:
+					draw_sprite_ext(spr_Atirador_1,1,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha);
+					break;
+				
 
-			if NO_RAIO_DE_ATAQUE
-			{
-				var ANGULO_INIMIGO = point_direction(x,y,INIMIGO_MAIS_PROXIMO.x,INIMIGO_MAIS_PROXIMO.y);
-				if (ANGULO_INIMIGO>270) {ANGULO_INIMIGO-=360;}
-				image_angle+=(ANGULO_INIMIGO-image_angle)/10;
-			}
-			else
-			{
-				image_angle+=(ANGULO_PARADO-image_angle)/10;
-			}
+				case NAVE_ATIRADOR_1_FOGO:
+					draw_sprite_ext(spr_Atirador_1,2,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha);
+					break;
+				
+
+				case NAVE_ATIRADOR_1_TERRA:
+					draw_sprite_ext(spr_Atirador_1,3,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha);
+					break;
 		}
-
-/*
-		draw_set_alpha(.1)
-		draw_set_color(COR)
-	draw_circle(x,y,ALCANCE,false)
-		draw_set_alpha(1)
-*/
-
-	draw_self()

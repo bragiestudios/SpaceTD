@@ -4,7 +4,7 @@
 
 	//Variáveis locais:
 		//Nave conectada ao slot:
-			NAVE_ID = noone;
+			NAVE_CONECTADA = noone;
 			COR = c_white;
 			
 		//Seleciona nova nave:
@@ -16,3 +16,6 @@
 			ALPHA1=random_range(.3,.9);
 			ALPHA_ADD2 = random_range(.001,.005)
 			ALPHA2=random_range(.3,.9);
+			
+		//Profundidade padrão:
+			DEPTH=depth

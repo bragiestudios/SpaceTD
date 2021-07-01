@@ -1,10 +1,10 @@
 
 
 	//Define COR:
-		if NAVE_ID=noone //Slot vazio
+		if NAVE_CONECTADA=noone //Slot vazio
 		 COR=c_white;
 		else
-		 COR = NAVE_ID.COR;
+		 COR = NAVE_CONECTADA.COR;
 
 	//Reposiciona: 
 		//Esquerda:
@@ -40,31 +40,24 @@
 				}
 			}
 			
-			
+
+
+
+	//Desenha popup-SELECAO_NAVE de tropa [PARTE 1]
+		if mySELECAO_NAVE=true
+		{
+			//Escurece fundo:
+					draw_set_alpha(.2)
+					draw_set_color(c_black)
+				draw_rectangle(0,0,room_width,room_height,false)
+					draw_set_alpha(1)
+		}
 			
 	//Se desenha:
-		if NAVE_ID=noone //Slot vazio
+		if NAVE_CONECTADA=noone //Slot vazio
 		{
-				
-			//Desenha popup-SELECAO_NAVE de tropa
-				if mySELECAO_NAVE
-				{
-					//Escurece fundo:
-							draw_set_alpha(.2)
-							draw_set_color(c_black)
-						draw_rectangle(0,0,room_width,room_height,false)
-							draw_set_alpha(1)
-						
-					//Desenha Círculo de seleção:
-						draw_sprite(spr_Circulo_Selecao,0,x,y)
-						
-					//Desenha opções:
-						draw_and_check_opcoes_SELECAO_NAVE()
-					
-				}
-				
 			//Sem nenhuma nave criada, desenha slot vazio:
-				image_alpha=.2
+				image_alpha=.3
 				image_blend=COR
 				draw_self()
 		}
@@ -90,11 +83,34 @@
 				image_alpha=.5
 				image_blend=COR
 				draw_self()
+				
+			//desenha a nave:
+				with(NAVE_CONECTADA)
+				{
+					event_perform(ev_draw,0)
+				}
 		}
 		
 		
-		//Soluciona bug de 1 click já ativar e desativar a seleção: 
-		if mySELECAO_NAVE=.5
+		//trata mySELECAO_NAVE:
+		switch(mySELECAO_NAVE)
 		{
-			mySELECAO_NAVE=true;
+			//Soluciona bug de 1 click já ativar e desativar a seleção: 
+				case .5:
+					mySELECAO_NAVE=true;
+					break;
+					
+			//Desenha popup-SELECAO_NAVE de tropa [PARTE 2]
+				case true:
+					//Desenha Círculo de seleção:
+						draw_sprite(spr_Circulo_Selecao,0,x,y)
+						
+					//Desenha opções e clica:
+						draw_and_check_opcoes_SELECAO_NAVE()
+					break;
+					
+			//Retorna à profundidade original: 
+				case false:
+					depth=DEPTH;
+					break;
 		}

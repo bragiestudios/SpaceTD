@@ -20,3 +20,7 @@
 			obj_.SLOT_ID = SLOT_ID_;
 			SLOT_ID_++;
 		}
+		
+		
+	//Reseta GRANA:
+		GRANA=100;

@@ -2,8 +2,8 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Draw",
-    "path": "folders/Conf/Scripts/Draw.yy",
+    "name": "Scripts",
+    "path": "folders/GAME/NAVES/Scripts.yy",
   },
   "resourceVersion": "1.0",
   "name": "SELECAO_NAVE",

@@ -34,8 +34,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Conf",
-    "path": "folders/Conf.yy",
+    "name": "GAME",
+    "path": "folders/GAME.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_PC",

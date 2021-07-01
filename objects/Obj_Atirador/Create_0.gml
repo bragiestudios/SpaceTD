@@ -1,13 +1,16 @@
 
 
 	//Variáveis locais:
-	
-		COR = c_white;
-	
-		NIVEL = 0;
-		
+
+		//Direção:
 		ANGULO_PARADO = (x<obj_Camera.x) ? 0 : 180;
 		image_angle	= ANGULO_PARADO;
-	
-		ALCANCE = 500;
+		
+		//Countdown
+		COUNTDOWN = 0;
+		
+		//Contigura caracteristicas pelo tipo:
+		SETUP_ATIRADORES(NAVE_ATIRADOR_0)
+		
+		
 	
