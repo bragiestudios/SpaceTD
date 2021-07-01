@@ -7,7 +7,8 @@ function set_responsividade_de_tela() {
 
 #region Tratamento de variaveis:
 			
-		if os_browser!=browser_not_a_browser
+	//HTML5:
+		if os_browser!=browser_not_a_browser 
 		{
 			var _wDISPLAY = browser_width;
 			var _hDISPLAY = browser_height;
@@ -16,6 +17,7 @@ function set_responsividade_de_tela() {
 			window_set_size(_wDISPLAY, _hDISPLAY);
 			window_center();
 		}
+	//Mobile/pc/console:
 		else
 		{
 			var _wDISPLAY = display_get_width();		//iPad 2048   //iPhoneX 1125  //FullHD 1080  //HD 720  //MOTO-ONE 720
@@ -86,9 +88,7 @@ function set_responsividade_de_tela() {
 #region Retorno:
 
 	
-		globalvar xZERO, yZERO, yNOTCH, xMAX, yMAX, xMEIO, yMEIO, y1QUA, y3QUA, y1OIT;
-			xZERO = 0;
-			yZERO = 0;
+		globalvar yNOTCH, xMAX, yMAX, xMEIO, yMEIO;
 		
 			yNOTCH = _notch;
 	

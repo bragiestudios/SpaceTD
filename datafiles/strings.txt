@@ -1,0 +1,15 @@
+[LEVEL]
+PT="LEVEL "
+EN="LEVEL "
+ES="NIVEL "
+
+[VERSAO]
+PT="*Versão "
+EN="*Version "
+ES="*Versión "
+
+
+[AAAAAAAAAA]
+PT="AAAAAAAAAA"
+EN="AAAAAAAAAA"
+ES="AAAAAAAAAA"

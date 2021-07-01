@@ -9,13 +9,26 @@
 
 	//CORES:
 		#macro c_QuaseBranco	make_color_rgb(238,238,238)
+		#macro c_FOGO			make_color_rgb(247,67 ,67 )
 	
 	//Idiomas:
 		#macro IDIOMA_PT	0
 		#macro IDIOMA_EN	1
 		#macro IDIOMA_ES	2
 		
+	//SELECOES:
+		#macro SELECAO_NAVE_NOT						0
 		
+		#macro SELECAO_NAVE_SLOT_VAZIO				1
+		#macro SELECAO_NAVE_SLOT_VAZIO_TROPA		1.1
+		#macro SELECAO_NAVE_SLOT_VAZIO_ATIRADOR		1.2
+		#macro SELECAO_NAVE_SLOT_VAZIO_CANHAO		1.3
+		#macro SELECAO_NAVE_SLOT_VAZIO_SUPORTE		1.4
+		
+		#macro SELECAO_NAVE_UP_ATIRADOR_0			2
+		#macro SELECAO_NAVE_UP_TROPA_0				3
+		#macro SELECAO_NAVE_UP_CANHAO_0				4
+		#macro SELECAO_NAVE_UP_SUPORTE_0			5
 		
 
 	//GET Safes INI:
@@ -26,9 +39,10 @@
 		
 		
 	//GAMEPLAY:
-		globalvar inGAME;
+		globalvar inGAME, inSELECAO_NAVE;
 		
 			inGAME=true;
+			inSELECAO_NAVE=SELECAO_NAVE_NOT;
 			
 				
 
@@ -57,7 +71,7 @@
 	
 	
 	
-	/*/Criar Particulas (estrelas):
+	//Criar Particulas (estrelas):
 		randomize();
 		var _N_ = (os_browser=browser_not_a_browser) ? 50 : 25;
 		repeat(_N_)
