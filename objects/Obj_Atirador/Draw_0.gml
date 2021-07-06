@@ -32,4 +32,24 @@
 				case NAVE_ATIRADOR_1_TERRA:
 					draw_sprite_ext(spr_Atirador_1,3,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha);
 					break;
+				
+			//Nível 2:
+				case NAVE_ATIRADOR_2_AGUA:
+					draw_sprite_ext(spr_Atirador_2,0,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha);
+					break;
+				
+
+				case NAVE_ATIRADOR_2_AR:
+					draw_sprite_ext(spr_Atirador_2,1,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha);
+					break;
+				
+
+				case NAVE_ATIRADOR_2_FOGO:
+					draw_sprite_ext(spr_Atirador_2,2,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha);
+					break;
+				
+
+				case NAVE_ATIRADOR_2_TERRA:
+					draw_sprite_ext(spr_Atirador_2,3,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha);
+					break;
 		}

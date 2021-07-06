@@ -20,52 +20,21 @@
 		#macro IDIOMA_ES	2
 		
 	//SELECOES:
-		#macro SELECAO_NAVE_NOT						0
-		
-		#macro SELECAO_NAVE_SLOT_VAZIO				1
-		#macro SELECAO_NAVE_SLOT_VAZIO_TROPA		1.1
-		#macro SELECAO_NAVE_SLOT_VAZIO_ATIRADOR		1.2
-		#macro SELECAO_NAVE_SLOT_VAZIO_CANHAO		1.3
-		#macro SELECAO_NAVE_SLOT_VAZIO_SUPORTE		1.4
-		
-		#macro SELECAO_NAVE_UP_ATIRADOR_0			2
-		#macro SELECAO_NAVE_UP_ATIRADOR_0_TERRA 	2.1
-		#macro SELECAO_NAVE_UP_ATIRADOR_0_AGUA 		2.2
-		#macro SELECAO_NAVE_UP_ATIRADOR_0_AR		2.3
-		#macro SELECAO_NAVE_UP_ATIRADOR_0_FOGO		2.4
-		#macro SELECAO_NAVE_UP_ATIRADOR_0_VENDA		2.5
-		
-		
-		#macro SELECAO_NAVE_UP_TROPA_0				3
-		#macro SELECAO_NAVE_UP_CANHAO_0				4
-		#macro SELECAO_NAVE_UP_SUPORTE_0			5
+		setup_macros_selecoes()
 
 	//NAVES:
-		#macro NAVE_VENDA					0
-		
-		#macro NAVE_TROPA_0					0.1
-		#macro NAVE_ATIRADOR_0				0.2
-		#macro NAVE_CANHAO_0				0.3
-		#macro NAVE_SUPORTE_0				0.4
-		
-		
-		#macro NAVE_ATIRADOR_1_TERRA		1.11
-		#macro NAVE_ATIRADOR_1_AGUA			1.12
-		#macro NAVE_ATIRADOR_1_AR			1.13
-		#macro NAVE_ATIRADOR_1_FOGO			1.14
-		
-		
-		#macro NAVE_ATIRADOR_2_TERRA		2.11
-		#macro NAVE_ATIRADOR_2_AGUA			2.12
-		#macro NAVE_ATIRADOR_2_AR			2.13
-		#macro NAVE_ATIRADOR_2_FOGO			2.14
+		setup_macros_naves()
 		
 	//ELEMENTOS:
 		#macro ELEMENTO_NEUTRO	0
-		#macro ELEMENTO_TERRA	1
-		#macro ELEMENTO_AGUA	2
-		#macro ELEMENTO_AR		3
-		#macro ELEMENTO_FOGO	4
+		#macro ELEMENTO_AGUA	1
+		#macro ELEMENTO_AR		2
+		#macro ELEMENTO_FOGO	3
+		#macro ELEMENTO_TERRA	4
+		#macro ELEMENTO_TESLA	5
+		#macro ELEMENTO_GELO	6
+		
+		
 	
 		
 

@@ -1,4 +1,41 @@
 
+
+function setup_macros_naves(){
+	
+		#macro NAVE_VENDA					0
+		
+		#macro NAVE_TROPA_0					0.1
+		#macro NAVE_CANHAO_0				0.3
+		#macro NAVE_SUPORTE_0				0.4
+		
+		
+	//Atiradores:
+		#macro NAVE_ATIRADOR_0				0.2
+		
+		#macro NAVE_ATIRADOR_1_AGUA			1.21
+		#macro NAVE_ATIRADOR_1_AR			1.22
+		#macro NAVE_ATIRADOR_1_FOGO			1.23
+		#macro NAVE_ATIRADOR_1_TERRA		1.24
+		
+		
+		#macro NAVE_ATIRADOR_2_AGUA			2.21
+		#macro NAVE_ATIRADOR_2_AR			2.22
+		#macro NAVE_ATIRADOR_2_FOGO			2.23
+		#macro NAVE_ATIRADOR_2_TERRA		2.24
+		#macro NAVE_ATIRADOR_2_TESLA		2.25
+		#macro NAVE_ATIRADOR_2_GELO			2.26
+		
+		
+		#macro NAVE_ATIRADOR_3_FERVE		2.21
+		#macro NAVE_ATIRADOR_3_PEDRA		2.22
+		#macro NAVE_ATIRADOR_3_TESLA		2.25
+		#macro NAVE_ATIRADOR_3_GELO			2.26
+		
+
+}
+
+
+
 function SETUP_ATIRADORES(tipo){
 
 	TIPO_NAVE=tipo
@@ -33,11 +70,11 @@ function SETUP_ATIRADORES(tipo){
 					var DANO_BONUS_AR   = 0.8;
 					var DANO_BONUS_AGUA = 1.4;
 				
-			//RECARGA COUNTDOWN DE ATAQUE:
-				var RECARGA_PADRAO_NIVEL_0 = 50;
-				var RECARGA_PADRAO_NIVEL_1 = 50;
-				var RECARGA_PADRAO_NIVEL_2 = 50;
-				var RECARGA_PADRAO_NIVEL_3 = 50;
+			//TEMPO DE RECARGA (COUNTDOWN) DE ATAQUE:
+				var RECARGA_PADRAO_NIVEL_0 = 80;
+				var RECARGA_PADRAO_NIVEL_1 = 30;
+				var RECARGA_PADRAO_NIVEL_2 = 20;
+				var RECARGA_PADRAO_NIVEL_3 = 10;
 	
 					var RECARGA_BONUS_AR   = 0.8;
 					var RECARGA_BONUS_AGUA = 1.4;
@@ -62,7 +99,6 @@ function SETUP_ATIRADORES(tipo){
 					VANTAGEM_ELEMENTAR	  = VANTAGEM_ELEMENTAR_PADRAO;
 					DESVANTAGEM_ELEMENTAR = DESVANTAGEM_ELEMENTAR_PADRAO;
 					ELEMENTO = ELEMENTO_NEUTRO;
-					sprite_index=spr_Atirador_0;
 					break;
 
 		//Nível 1:

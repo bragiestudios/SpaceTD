@@ -23,4 +23,4 @@
 		
 		
 	//Reseta GRANA:
-		GRANA=100;
+		GRANA=1000;

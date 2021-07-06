@@ -52,7 +52,8 @@
 				//Direciona para o INIMIGO_MAIS_AVANCADO (se existir):
 				if INIMIGO_MAIS_AVANCADO!=noone
 				{
-					var ANGULO_INIMIGO = point_direction(x,y,INIMIGO_MAIS_AVANCADO.x,INIMIGO_MAIS_AVANCADO.y);
+					var DESLOCAMENTO_VERTICAL = INIMIGO_MAIS_AVANCADO.vspeed*(point_distance(x,y,INIMIGO_MAIS_AVANCADO.x,INIMIGO_MAIS_AVANCADO.y)/PROJETIL_ATIRADOR_SPEED)
+					var ANGULO_INIMIGO = point_direction(x,y,INIMIGO_MAIS_AVANCADO.x,INIMIGO_MAIS_AVANCADO.y+DESLOCAMENTO_VERTICAL);
 					if (ANGULO_INIMIGO>270) {ANGULO_INIMIGO-=360;}
 					image_angle+=(ANGULO_INIMIGO-image_angle)/10;
 					
@@ -73,6 +74,11 @@
 					image_angle+=(ANGULO_PARADO-image_angle)/20;
 			}
 		}
+		else
+		{
+			//Caso não tenha nenhum inimigo, voltamos para posição parado
+				image_angle+=(ANGULO_PARADO-image_angle)/20;
+		}
 
 
 
@@ -85,7 +91,7 @@
 		COUNTDOWN=RECARGA;
 		
 		var projetil = instance_create_depth(x,y,depth,Obj_Atirador_Projetil);
-		projetil.speed=10;
+		projetil.speed=PROJETIL_ATIRADOR_SPEED;
 		projetil.direction=image_angle;
 		projetil.DANO=DANO;
 		projetil.INIMIGO=INIMIGO_MAIS_AVANCADO;
@@ -101,12 +107,12 @@
 				
 			case NAVE_ATIRADOR_1_AGUA:
 				projetil.sprite_index=spr_Atirador_Projetil;
-				projetil.image_index =3;
+				projetil.image_index =2;
 				break;
 				
 			case NAVE_ATIRADOR_1_AR:
 				projetil.sprite_index=spr_Atirador_Projetil;
-				projetil.image_index =2;
+				projetil.image_index =3;
 				break;
 				
 			case NAVE_ATIRADOR_1_FOGO:

@@ -5,4 +5,4 @@
 		x=obj_Camera.x+random_range(-100,100);
 		
 		
-		VIDA=10
+		VIDA=50
