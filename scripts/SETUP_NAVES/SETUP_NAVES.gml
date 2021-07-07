@@ -31,6 +31,10 @@ function setup_macros_naves(){
 		#macro NAVE_ATIRADOR_3_TESLA		2.25
 		#macro NAVE_ATIRADOR_3_GELO			2.26
 		
+		
+	//Canhões: 
+		#macro NAVE_CANHAO_1_TERRA			10000
+		
 
 }
 

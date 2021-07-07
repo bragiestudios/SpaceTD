@@ -28,8 +28,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "NAVES",
-    "path": "folders/GAME/NAVES.yy",
+    "name": "ATIRADOR",
+    "path": "folders/GAME/NAVES/ATIRADOR.yy",
   },
   "resourceVersion": "1.0",
   "name": "Obj_Atirador",

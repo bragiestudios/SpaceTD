@@ -33,15 +33,4 @@
 	//Trata profundidade: 
 	depth=DEPTH-100;
 	
-	
-	var aa = ds_stack_start(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15);
-	
-	while(!ds_stack_empty(aa))
-	{
-		var read_ = ds_stack_top(aa)
-		ds_stack_pop(aa)
-		
-		show_debug_message("|"+string(read_)+"|")
-	}
-	
-	ds_stack_destroy(aa)
+

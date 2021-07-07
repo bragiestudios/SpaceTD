@@ -19,3 +19,10 @@ function ds_stack_start()
 
 }
 
+function ds_stack_get(id)
+{
+	var RETORNO = ds_stack_top(id)
+	ds_stack_pop(id)
+	
+	return RETORNO;
+}

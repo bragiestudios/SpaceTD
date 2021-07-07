@@ -6,7 +6,7 @@
     "path": "folders/GAME/NAVES/Scripts.yy",
   },
   "resourceVersion": "1.0",
-  "name": "ds_stack_",
+  "name": "DS_STACK",
   "tags": [],
   "resourceType": "GMScript",
 }

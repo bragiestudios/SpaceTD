@@ -70,7 +70,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Sprites",
-    "path": "folders/GAME/NAVES/Sprites.yy",
+    "path": "folders/GAME/NAVES/ATIRADOR/Sprites.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_Atirador_0",

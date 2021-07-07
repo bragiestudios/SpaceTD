@@ -21,8 +21,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "NAVES",
-    "path": "folders/GAME/NAVES.yy",
+    "name": "TROPA",
+    "path": "folders/GAME/NAVES/TROPA.yy",
   },
   "resourceVersion": "1.0",
   "name": "Obj_Tropa",

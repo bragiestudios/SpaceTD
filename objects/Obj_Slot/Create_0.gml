@@ -19,3 +19,6 @@
 			
 		//Profundidade padrão:
 			DEPTH=depth
+			
+		//FUNDIR:
+			FUNDIR = ""
