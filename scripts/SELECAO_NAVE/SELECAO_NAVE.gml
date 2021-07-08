@@ -167,7 +167,7 @@ function draw_and_check_opcoes_SELECAO_NAVE(){
 	switch(inSELECAO_NAVE)
 	{
 		
-		#region SLOT_VAZIO:
+	#region SLOT_VAZIO:
 	
 			case SELECAO_NAVE_SLOT_VAZIO:
 			case SELECAO_NAVE_SLOT_VAZIO_TROPA:
@@ -212,12 +212,12 @@ function draw_and_check_opcoes_SELECAO_NAVE(){
 		
 			break;
 
-		#endregion SLOT_VAZIO
+	#endregion SLOT_VAZIO
 
 
-		#region Atiradores:
+	#region Atiradores:
 	
-		//Nível 0:
+		#region Nível 0:
 			case SELECAO_NAVE_UP_ATIRADOR_0:
 			case SELECAO_NAVE_UP_ATIRADOR_0_TERRA:
 			case SELECAO_NAVE_UP_ATIRADOR_0_AGUA:
@@ -271,8 +271,11 @@ function draw_and_check_opcoes_SELECAO_NAVE(){
 					}
 		
 			break;
+			
+		#endregion Nível 0
 	
-		//Nível 1 Agua:
+	
+		#region Nível 1 Agua:
 			case SELECAO_NAVE_UP_ATIRADOR_1_AGUA:
 			case SELECAO_NAVE_UP_ATIRADOR_1_AGUA_2_AGUA:
 			case SELECAO_NAVE_UP_ATIRADOR_1_AGUA_2_GELO:
@@ -333,8 +336,10 @@ function draw_and_check_opcoes_SELECAO_NAVE(){
 					}
 		
 			break;
-
-		#endregion Atiradores
+		
+		#endregion Nível 1 Agua
+		
+	#endregion Atiradores
 		
 		
 		
@@ -389,17 +394,18 @@ function draw_bt_SELECAO_NAVE(	angulo,
 				
 				//Limpar todos os slots:
 					with(Obj_Slot){FUNDIR = "|DESCARTADO|"}
-					FUNDIR = "|EU_MESMO|"
+					FUNDIR = "|PRINCIPAL|"
 					
 					
 					var ITEM_REQUER = 0;
+					
 				
 					// while verifica item por item da pilha (stack)
 					while(!ds_stack_empty(stack_fundir))
 					{
 						
 						var NAVE_REQUER_ATUAL = ds_stack_get(stack_fundir);
-						var NAVE_REQUER_ATUAL_POSSUI = 0;
+						var NAVE_REQUER_ATUAL_POSSUI = false;
 						ITEM_REQUER++;
 						
 							// with verifica todas as instancias do obj_slot.
@@ -408,14 +414,13 @@ function draw_bt_SELECAO_NAVE(	angulo,
 								//Ignora slots vazios:
 								if NAVE_CONECTADA!=noone 
 								//Ignora o próprio slot que tá fazendo a pergunta
-								and FUNDIR!="|EU_MESMO|"
+								and FUNDIR!="|PRINCIPAL|"
 								//Ignora slots que não estão próximos:
 								and point_distance(x,y,other.x,other.y)<250
 								{
 									//Se a nave no slot atual for o tipo de nave que queremos:
 									if NAVE_CONECTADA.TIPO_NAVE=NAVE_REQUER_ATUAL
 									{
-										NAVE_REQUER_ATUAL_POSSUI++;
 										
 										if (FUNDIR == "|DESCARTADO|")
 										{
@@ -432,10 +437,22 @@ function draw_bt_SELECAO_NAVE(	angulo,
 											
 										}
 										
+										//Caso eu seja a primeira opção desse item:
+											if NAVE_REQUER_ATUAL_POSSUI==false
+											{
+												//Verifica se já não é a primeira opção de outro item:
+												if !string_count("|INIT|",FUNDIR)
+												{
+													NAVE_REQUER_ATUAL_POSSUI=true;
+													FUNDIR+="|INIT|";
+												}
+											}
 										
-											FUNDIR+="|QUERO_IT_"+string(ITEM_REQUER)+"__OP_"+string(NAVE_REQUER_ATUAL_POSSUI)+"|";
-											//"|QUERO_IT_1__OP_1|"
-											//"|QUERO_IT_1__OP_2||QUERO_IT_2__OP_1|" ...
+											FUNDIR+="|QUERO_IT_"+string(ITEM_REQUER);
+											//"|INIT||QUERO_IT_1|"
+											//"|QUERO_IT_1||QUERO_IT_2|" ...
+											
+											
 											
 										
 									}
@@ -445,7 +462,7 @@ function draw_bt_SELECAO_NAVE(	angulo,
 						
 						
 						//Terminamos a rotina with com esse item ausente.
-						if NAVE_REQUER_ATUAL_POSSUI=0
+						if NAVE_REQUER_ATUAL_POSSUI=false
 						{
 							REQUER_FUNDIR=false;
 						}
@@ -510,10 +527,26 @@ function draw_bt_SELECAO_NAVE(	angulo,
 							}
 							else
 							{
-								//FAZ O UPGRADE:
-								with(NAVE_CONECTADA)
-								{SETUP_ATIRADORES(conteudo);}
-								GRANA-=preco;
+								if stack_fundir=noone // noone = não requer nada
+								{
+									//FAZ O UPGRADE:
+									with(NAVE_CONECTADA)
+									{SETUP_ATIRADORES(conteudo);}
+									GRANA-=preco;
+								}
+								else
+								{
+									//Prepara Slots para as ações de fundir:
+									with(Obj_Slot) {FUNDIR_ACAO=FUNDIR;}
+									
+									//Contextualiza slot atual (princial) com as informações necessárias:
+									FUNDIR_PRECO	= preco;
+									FUNDIR_NAVE		= conteudo;
+									FUNDIR_ETAPAS	= ITEM_REQUER;
+									
+									//Informa globalmente que estamos em um processo de fundição:
+									inFUNDICAO=true;
+								}
 							}
 						}
 						

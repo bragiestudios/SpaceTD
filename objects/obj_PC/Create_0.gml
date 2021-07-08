@@ -46,10 +46,11 @@
 		
 		
 	//GAMEPLAY:
-		globalvar inGAME, inSELECAO_NAVE, GRANA;
+		globalvar inGAME, inSELECAO_NAVE, inFUNDICAO, GRANA;
 		
 			inGAME=true;
 			inSELECAO_NAVE=SELECAO_NAVE_NOT;
+			inFUNDICAO=false;
 			GRANA=50;
 			
 				

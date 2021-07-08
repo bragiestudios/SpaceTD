@@ -22,3 +22,7 @@
 			
 		//FUNDIR:
 			FUNDIR = ""
+			FUNDIR_ACAO="";
+			FUNDIR_PRECO	= 0;
+			FUNDIR_NAVE		= 0;
+			FUNDIR_ETAPAS	= 0;

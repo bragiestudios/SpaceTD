@@ -84,6 +84,22 @@
 				image_blend=COR
 				draw_self()
 				
+			//Desenha destaque para fundição:
+				if inFUNDICAO>false
+				{
+					//Se faço parte das opções de fundição atual...
+					if string_count("|QUERO_IT_"+string(inFUNDICAO),FUNDIR_ACAO)
+					{
+						//Desenha que é uma opção para fundir:
+						draw_set_color(c_white)
+						draw_set_alpha(.2)
+						draw_circle(x,y,85,false)
+						draw_set_alpha(1)
+					}
+					
+				}
+				
+				
 			//desenha a nave:
 				with(NAVE_CONECTADA)
 				{

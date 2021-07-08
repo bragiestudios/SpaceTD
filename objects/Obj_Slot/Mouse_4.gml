@@ -1,5 +1,12 @@
+/// @description SELEÇÃO_NAVE
+	
+	
 
 
+	//Se estiver em uma fundição, sair
+		if inFUNDICAO>false {exit;}
+		
+		
 	//Se já estiver em uma SELECAO_NAVE, sair
 		if inSELECAO_NAVE!=SELECAO_NAVE_NOT {exit;}
 
