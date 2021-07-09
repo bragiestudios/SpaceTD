@@ -34,6 +34,9 @@ function setup_macros_naves(){
 		
 	//Canhões: 
 		#macro NAVE_CANHAO_1_TERRA			10000
+		#macro NAVE_CANHAO_1_AGUA           10001
+		#macro NAVE_CANHAO_1_FOGO           10002
+		#macro NAVE_CANHAO_1_AR             10003
 		
 
 }

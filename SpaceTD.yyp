@@ -4,6 +4,7 @@
     {"id":{"name":"bg_PlanoDeFundo","path":"sprites/bg_PlanoDeFundo/bg_PlanoDeFundo.yy",},"order":0,},
     {"id":{"name":"SELECAO_NAVE","path":"scripts/SELECAO_NAVE/SELECAO_NAVE.yy",},"order":0,},
     {"id":{"name":"spr_Slot_Brilho","path":"sprites/spr_Slot_Brilho/spr_Slot_Brilho.yy",},"order":1,},
+    {"id":{"name":"spr_atirador3_especial_abacate","path":"sprites/spr_atirador3_especial_abacate/spr_atirador3_especial_abacate.yy",},"order":17,},
     {"id":{"name":"Obj_Gamaplay","path":"objects/Obj_Gamaplay/Obj_Gamaplay.yy",},"order":0,},
     {"id":{"name":"obj_particula","path":"objects/obj_particula/obj_particula.yy",},"order":0,},
     {"id":{"name":"obj_BigData","path":"objects/obj_BigData/obj_BigData.yy",},"order":0,},
