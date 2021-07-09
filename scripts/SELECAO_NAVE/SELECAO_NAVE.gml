@@ -427,7 +427,7 @@ function draw_and_check_opcoes_SELECAO_NAVE(){
 				//Upgrade para Água 2:
 					var check_click = draw_bt_SELECAO_NAVE(	/* POSIÇÃO GRAUS: */ -90+(120*2),
 															/* SELEÇÃO AÇÃO:  */ SELECAO_NAVE_UP_ATIRADOR_1_AGUA_2_AGUA,
-															/* SUB-IMAGES:	  */ 5, 0, 5, 0,  // REFERENCIA EM: spr_bt_SELECAO_NAVE //
+															/* SUB-IMAGES:	  */ 6, 0, 6, 0,  // REFERENCIA EM: spr_bt_SELECAO_NAVE //
 															/* PRÓXIMA NAVE:  */ NAVE_ATIRADOR_2_AGUA,
 															/* PREÇO AÇÃO:	  */ PRECO[NAVE_ATIRADOR_2_AGUA],
 															/* REQUER FUSÃO:  */ ds_stack_start(NAVE_ATIRADOR_1_AGUA));
@@ -485,7 +485,7 @@ function draw_and_check_opcoes_SELECAO_NAVE(){
 				//Upgrade para Fervente 3:
 					var check_click = draw_bt_SELECAO_NAVE(	/* POSIÇÃO GRAUS: */ 90,
 															/* SELEÇÃO AÇÃO:  */ SELECAO_NAVE_UP_ATIRADOR_2_AGUA_3_FERVE,
-															/* SUB-IMAGES:	  */ 5, 0, 5, 0,  // REFERENCIA EM: spr_bt_SELECAO_NAVE //
+															/* SUB-IMAGES:	  */ 6, 0, 6, 0,  // REFERENCIA EM: spr_bt_SELECAO_NAVE //
 															/* PRÓXIMA NAVE:  */ NAVE_ATIRADOR_3_FERVE,
 															/* PREÇO AÇÃO:	  */ PRECO[NAVE_ATIRADOR_3_FERVE],
 															/* REQUER FUSÃO:  */ ds_stack_start(NAVE_ATIRADOR_2_AGUA, NAVE_ATIRADOR_2_FOGO));
@@ -538,7 +538,7 @@ function draw_and_check_opcoes_SELECAO_NAVE(){
 				//Upgrade para Fogo 2:
 					var check_click = draw_bt_SELECAO_NAVE(	/* POSIÇÃO GRAUS: */ -90+(120*2),
 															/* SELEÇÃO AÇÃO:  */ SELECAO_NAVE_UP_ATIRADOR_1_FOGO_2_FOGO,
-															/* SUB-IMAGES:	  */ 5, 0, 5, 0,  // REFERENCIA EM: spr_bt_SELECAO_NAVE //
+															/* SUB-IMAGES:	  */ 8, 0, 8, 0,  // REFERENCIA EM: spr_bt_SELECAO_NAVE //
 															/* PRÓXIMA NAVE:  */ NAVE_ATIRADOR_2_FOGO,
 															/* PREÇO AÇÃO:	  */ PRECO[NAVE_ATIRADOR_2_FOGO],
 															/* REQUER FUSÃO:  */ ds_stack_start(NAVE_ATIRADOR_1_FOGO));
@@ -596,7 +596,7 @@ function draw_and_check_opcoes_SELECAO_NAVE(){
 				//Upgrade para Fervente 3:
 					var check_click = draw_bt_SELECAO_NAVE(	/* POSIÇÃO GRAUS: */ 90,
 															/* SELEÇÃO AÇÃO:  */ SELECAO_NAVE_UP_ATIRADOR_2_FOGO_3_FERVE,
-															/* SUB-IMAGES:	  */ 5, 0, 5, 0,  // REFERENCIA EM: spr_bt_SELECAO_NAVE //
+															/* SUB-IMAGES:	  */ 8, 0, 8, 0,  // REFERENCIA EM: spr_bt_SELECAO_NAVE //
 															/* PRÓXIMA NAVE:  */ NAVE_ATIRADOR_3_FERVE,
 															/* PREÇO AÇÃO:	  */ PRECO[NAVE_ATIRADOR_3_FERVE],
 															/* REQUER FUSÃO:  */ ds_stack_start(NAVE_ATIRADOR_2_AGUA, NAVE_ATIRADOR_2_FOGO));
@@ -631,6 +631,109 @@ function draw_and_check_opcoes_SELECAO_NAVE(){
 	
 //***********************ELEMENTO AR***************************	
 	#region ATIRADORES AR
+		#region Nível 1 Ar
+			case SELECAO_NAVE_UP_ATIRADOR_1_AR:
+			case SELECAO_NAVE_UP_ATIRADOR_1_AR_2_AR:
+			case SELECAO_NAVE_UP_ATIRADOR_1_AR_2_TESLA:
+			case SELECAO_NAVE_UP_ATIRADOR_1_AR_VENDA:
+		
+				/*
+					Selecione o upgrade para nível 2 ou venda:
+					- Ar 2;
+					- Tesla 2;
+					- Venda;
+				*/
+				
+
+				//Upgrade para Ar 2:
+					var check_click = draw_bt_SELECAO_NAVE(	/* POSIÇÃO GRAUS: */ -90+(120*2),
+															/* SELEÇÃO AÇÃO:  */ SELECAO_NAVE_UP_ATIRADOR_1_AR_2_AR,
+															/* SUB-IMAGES:	  */ 7, 0, 7, 0,  // REFERENCIA EM: spr_bt_SELECAO_NAVE //
+															/* PRÓXIMA NAVE:  */ NAVE_ATIRADOR_2_AR,
+															/* PREÇO AÇÃO:	  */ PRECO[NAVE_ATIRADOR_2_AR],
+															/* REQUER FUSÃO:  */ ds_stack_start(NAVE_ATIRADOR_1_AR));
+					if check_click {sair_da_selecao=false;}
+				
+				//Upgrade para Gelo 2:
+					var check_click = draw_bt_SELECAO_NAVE(	/* POSIÇÃO GRAUS: */ -90+(120),
+															/* SELEÇÃO AÇÃO:  */ SELECAO_NAVE_UP_ATIRADOR_1_AR_2_TESLA,
+															/* SUB-IMAGES:	  */ 5, 0, 5, 0,  // REFERENCIA EM: spr_bt_SELECAO_NAVE //
+															/* PRÓXIMA NAVE:  */ NAVE_ATIRADOR_2_TESLA,
+															/* PREÇO AÇÃO:	  */ PRECO[NAVE_ATIRADOR_2_TESLA],
+															/* REQUER FUSÃO:  */ ds_stack_start(NAVE_CANHAO_1_FOGO));
+					 if check_click {sair_da_selecao=false;}
+				
+				//Vender nave:
+					var check_click = draw_bt_SELECAO_NAVE(	/* POSIÇÃO GRAUS: */ -90,
+															/* SELEÇÃO AÇÃO:  */ SELECAO_NAVE_UP_ATIRADOR_1_AR_VENDA,
+															/* SUB-IMAGES:	  */ 10, 9,10, 9,  // REFERENCIA EM: spr_bt_SELECAO_NAVE //
+															/* PRÓXIMA NAVE:  */ NAVE_VENDA,
+															/* PREÇO AÇÃO:	  */ P_VENDA[NAVE_ATIRADOR_1_AR],
+															/* REQUER FUSÃO:  */ noone);
+					 if check_click {sair_da_selecao=false;}
+					 
+				//Desenha área de alcance atual:
+					draw_area_alcance_atirador(NAVE_CONECTADA.TIPO_NAVE);
+					 
+				//Desenha preview da área de alcance:
+					switch(inSELECAO_NAVE)
+					{
+						case SELECAO_NAVE_UP_ATIRADOR_1_AR_2_AR:
+							draw_area_alcance_atirador(NAVE_ATIRADOR_2_FOGO)	break;
+							 
+						case SELECAO_NAVE_UP_ATIRADOR_1_AR_2_TESLA:
+							draw_area_alcance_atirador(NAVE_ATIRADOR_2_TESLA)	break;
+							 
+					}
+		
+			break;
+			
+		#endregion Nível 1 Ar
+		
+		#region Nível 2 Terra:
+			case SELECAO_NAVE_UP_ATIRADOR_2_AR:
+			case SELECAO_NAVE_UP_ATIRADOR_2_AR_3_PEDRA:
+			case SELECAO_NAVE_UP_ATIRADOR_2_AR_VENDA:
+		
+				/*
+					Selecione o upgrade para nível 3 ou venda:
+					- Pedra 3;
+					- Venda;
+				*/
+				
+
+				
+				//Upgrade para Pedra 3:
+					var check_click = draw_bt_SELECAO_NAVE(	/* POSIÇÃO GRAUS: */ 90,
+															/* SELEÇÃO AÇÃO:  */ SELECAO_NAVE_UP_ATIRADOR_2_AR_3_PEDRA,
+															/* SUB-IMAGES:	  */ 5, 0, 5, 0,  // REFERENCIA EM: spr_bt_SELECAO_NAVE //
+															/* PRÓXIMA NAVE:  */ NAVE_ATIRADOR_3_PEDRA,
+															/* PREÇO AÇÃO:	  */ PRECO[NAVE_ATIRADOR_3_PEDRA],
+															/* REQUER FUSÃO:  */ ds_stack_start(NAVE_ATIRADOR_2_AR, NAVE_ATIRADOR_2_TERRA));
+					 if check_click {sair_da_selecao=false;}
+				
+				//Vender nave:
+					var check_click = draw_bt_SELECAO_NAVE(	/* POSIÇÃO GRAUS: */ -90,
+															/* SELEÇÃO AÇÃO:  */ SELECAO_NAVE_UP_ATIRADOR_2_AR_VENDA,
+															/* SUB-IMAGES:	  */ 10, 9,10, 9,  // REFERENCIA EM: spr_bt_SELECAO_NAVE //
+															/* PRÓXIMA NAVE:  */ NAVE_VENDA,
+															/* PREÇO AÇÃO:	  */ P_VENDA[NAVE_ATIRADOR_2_AR],
+															/* REQUER FUSÃO:  */ noone);
+					 if check_click {sair_da_selecao=false;}
+					 
+				//Desenha área de alcance atual:
+					draw_area_alcance_atirador(NAVE_CONECTADA.TIPO_NAVE);
+					 
+				//Desenha preview da área de alcance:
+					switch(inSELECAO_NAVE)
+					{
+						case SELECAO_NAVE_UP_ATIRADOR_2_AR_3_PEDRA:
+							draw_area_alcance_atirador(NAVE_ATIRADOR_3_PEDRA)	break;
+							 
+					}
+		
+			break;			
+		#endregion Nível 2 Terra:
 	#endregion ATIRADORES AR	
 		
 			
