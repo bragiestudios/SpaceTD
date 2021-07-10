@@ -12,11 +12,6 @@ function SELECAO_NAVE_ATIRADORES(sair_da_selecao){
 	
 		var PRECO,P_VENDA;
 
-//**************************************ATIRADORES NÍVEL 0**************************************							
-		//Atiradores:
-			PRECO[NAVE_ATIRADOR_0]			= 50;
-			
-			P_VENDA[NAVE_ATIRADOR_0]		= PRECO[NAVE_ATIRADOR_0];
 			
 //**************************************ATIRADORES NÍVEL 1**************************************					
 			PRECO[NAVE_ATIRADOR_1_AGUA]		= 50;
@@ -66,56 +61,6 @@ function SELECAO_NAVE_ATIRADORES(sair_da_selecao){
 switch(inSELECAO_NAVE)
 	{
 		
-	#region SLOT_VAZIO:
-	
-			case SELECAO_NAVE_SLOT_VAZIO:
-			case SELECAO_NAVE_SLOT_VAZIO_TROPA:
-			case SELECAO_NAVE_SLOT_VAZIO_ATIRADOR:
-			case SELECAO_NAVE_SLOT_VAZIO_CANHAO:
-			case SELECAO_NAVE_SLOT_VAZIO_SUPORTE:
-		
-				/*
-					Selecione uma nave inicial nível 0:
-					- Tropa;
-					- Atirador;
-					- Canhão;
-					- Suporte;
-				*/
-				
-				//Desenha preview da nave a ser criada e área de alcance:
-					switch(inSELECAO_NAVE)
-					{
-						case SELECAO_NAVE_SLOT_VAZIO_TROPA:
-							draw_sprite_ext(spr_Atirador_0,0,x,y,1,1,(x<obj_Camera.x) ? 0 : 180,-1,.3);	draw_area_alcance_atirador(NAVE_ATIRADOR_0)	break;
-						case SELECAO_NAVE_SLOT_VAZIO_ATIRADOR:
-							draw_sprite_ext(spr_Atirador_0,0,x,y,1,1,(x<obj_Camera.x) ? 0 : 180,-1,.3);	draw_area_alcance_atirador(NAVE_ATIRADOR_0)	break;
-						case SELECAO_NAVE_SLOT_VAZIO_CANHAO:
-							draw_sprite_ext(spr_Atirador_0,0,x,y,1,1,(x<obj_Camera.x) ? 0 : 180,-1,.3); break;
-						case SELECAO_NAVE_SLOT_VAZIO_SUPORTE:
-							draw_sprite_ext(spr_Atirador_0,0,x,y,1,1,(x<obj_Camera.x) ? 0 : 180,-1,.3); break;
-					}
-					
-				//Desenha Círculo de seleção:
-					draw_sprite(spr_Circulo_Selecao,0,x,y)
-				
-				//Tropa:
-					var check_click = draw_bt_SELECAO_NAVE( 45,SELECAO_NAVE_SLOT_VAZIO_TROPA	,17,0,13,1,noone,PRECO[NAVE_ATIRADOR_0],noone);
-					 if check_click {sair_da_selecao=false;}
-				//Atirador:
-					var check_click = draw_bt_SELECAO_NAVE(135,SELECAO_NAVE_SLOT_VAZIO_ATIRADOR	,15,0,11,1,Obj_Atirador,PRECO[NAVE_ATIRADOR_0],noone);
-					 if check_click {sair_da_selecao=false;}
-				//Canhão:
-					var check_click = draw_bt_SELECAO_NAVE(225,SELECAO_NAVE_SLOT_VAZIO_CANHAO	,16,0,12,1,noone,PRECO[NAVE_ATIRADOR_0],noone);
-					 if check_click {sair_da_selecao=false;}
-				//Suporte:
-					var check_click = draw_bt_SELECAO_NAVE(315,SELECAO_NAVE_SLOT_VAZIO_SUPORTE	,14,0,10,1,noone,PRECO[NAVE_ATIRADOR_0],noone);
-					 if check_click {sair_da_selecao=false;}
-					 
-		
-			break;
-
-	#endregion SLOT_VAZIO
-
 //***********************ELEMENTO NEUTRO***********************
 	#region NAVES NÍVEL 0:
 	

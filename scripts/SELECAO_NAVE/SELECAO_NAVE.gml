@@ -271,6 +271,7 @@ function draw_and_check_opcoes_SELECAO_NAVE(){
 	
 	
 	//Subdivisão do script:
+		sair_da_selecao = SELECAO_NAVE_SLOT(sair_da_selecao);
 		sair_da_selecao = SELECAO_NAVE_TROPAS(sair_da_selecao);
 		sair_da_selecao = SELECAO_NAVE_ATIRADORES(sair_da_selecao);
 	
