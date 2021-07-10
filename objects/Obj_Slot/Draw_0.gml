@@ -118,10 +118,7 @@
 					
 			//Desenha popup-SELECAO_NAVE de tropa [PARTE 2]
 				case true:
-					//Desenha Círculo de seleção:
-						draw_sprite(spr_Circulo_Selecao,0,x,y)
-						
-					//Desenha opções e clica:
+					//Desenha circulo, preview de alcance e botões(com ação):
 						draw_and_check_opcoes_SELECAO_NAVE()
 					break;
 					
