@@ -457,7 +457,7 @@ function draw_bt_SELECAO_NAVE(	angulo,
 								{
 									//FAZ O UPGRADE:
 									with(NAVE_CONECTADA)
-									{SETUP_ATIRADORES(conteudo);}
+									{SETUP_ATIRADORE(conteudo);}
 									GRANA-=preco;
 								}
 								else
@@ -494,7 +494,7 @@ function draw_area_alcance_atirador(tipo_nave){
 	
 	
 	//Descobre o alcance:
-	with(inst_Atirador_Generico) {SETUP_ATIRADORES(tipo_nave);}
+	with(inst_Atirador_Generico) {SETUP_ATIRADORE(tipo_nave);}
 	var alcance_px_draw=inst_Atirador_Generico.ALCANCE_px;
 	var alcance_an_draw=inst_Atirador_Generico.ALCANCE_an;
 	
@@ -503,6 +503,28 @@ function draw_area_alcance_atirador(tipo_nave){
 	//Desenha:
 			draw_set_alpha(.1)
 			draw_set_color(inst_Atirador_Generico.COR)
+			draw_set_circle_precision(64)
+		var angulo_base = (x<obj_Camera.x) ? 0 : 180;
+		draw_circle_ext(x,y,alcance_px_draw,16,angulo_base-(alcance_an_draw/2),alcance_an_draw,0,false)
+			draw_set_alpha(1)
+	
+	
+}
+
+
+function draw_area_alcance_tropa(tipo_nave){
+	
+	
+	//Descobre o alcance:
+	with(inst_Tropa_Generica) {SETUP_TROPA(tipo_nave);}
+	var alcance_px_draw=inst_Tropa_Generica.ALCANCE_REALOCAMENTO_px;
+	var alcance_an_draw=inst_Tropa_Generica.ALCANCE_REALOCAMENTO_an;
+	
+	
+	
+	//Desenha:
+			draw_set_alpha(.1)
+			draw_set_color(inst_Tropa_Generica.COR)
 			draw_set_circle_precision(64)
 		var angulo_base = (x<obj_Camera.x) ? 0 : 180;
 		draw_circle_ext(x,y,alcance_px_draw,16,angulo_base-(alcance_an_draw/2),alcance_an_draw,0,false)

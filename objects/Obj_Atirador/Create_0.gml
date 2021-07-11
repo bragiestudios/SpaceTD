@@ -14,7 +14,7 @@
 		PROJETIL_ATIRADOR_SPEED = 10
 		
 		//Contigura caracteristicas pelo tipo:
-		SETUP_ATIRADORES(NAVE_ATIRADOR_0)
+		SETUP_ATIRADORE(NAVE_ATIRADOR_0)
 		
 		
 	

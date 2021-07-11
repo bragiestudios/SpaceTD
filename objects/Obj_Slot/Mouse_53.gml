@@ -38,7 +38,7 @@
 					{
 						//Upgrade:
 						with(NAVE_CONECTADA)
-						{SETUP_ATIRADORES(other.FUNDIR_NAVE);}
+						{SETUP_ATIRADORE(other.FUNDIR_NAVE);}
 						
 						//Custo:
 						GRANA-=FUNDIR_PRECO;
