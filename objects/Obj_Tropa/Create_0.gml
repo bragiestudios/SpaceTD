@@ -8,25 +8,28 @@
 		//Posição correta:
 		x += (x<obj_Camera.x) ? -20 : 20;
 		
-		//Countdown
-		COUNTDOWN_REPOSICAO = 0;
-		
 		//VELOCIDADE DO PROJETIL DO FILHO
 		PROJETIL_TROPA_SPEED = 10
 		
 		//ALOCAMENTO:
 		var Linha = point_distance(x,0,obj_Camera.x,0)>300 ? 1.8 : 1;
 		ALOCAMENTO_x=obj_Camera.x+((x<obj_Camera.x) ? -50*Linha : 50*Linha);
-		ALOCAMENTO_y=y;
+		ALOCAMENTO_y=y+choose(+100,-100);
 		ALOCAMENTO_speed=40;
+		
+		ANGULO_PARADO = point_direction(x,y,ALOCAMENTO_x,ALOCAMENTO_y);  //[[[[[[ESCOLHER ISSO AQUI DEPOIS]]]]]]]]]
 		
 		//Contigura caracteristicas pelo tipo:
 		SETUP_TROPA(NAVE_TROPA_0)
+
+		//Genérico:
+			if id=inst_Tropa_Generica {exit;}
+		
 		
 		//Filhos
 		for(var i=0; i<N_FILHOS; i++)
 		{
-			FILHO[i]=instance_create_depth(x,y,depth,Obj_Tropa_Filhos);
+			FILHO[i]=instance_create_depth(x,y,depth+1,Obj_Tropa_Filhos);
 			
 			FILHO[i].PAI=id;
 			
@@ -45,7 +48,7 @@
 				var speed_= speed;
 				var direction_= direction;
 				direction=90+((360/N_FILHOS)*i);
-				speed=N_FILHOS*10;
+				speed=N_FILHOS*10; //Raio
 					FILHO[i].ALOCAMENTO_x=ALOCAMENTO_x+hspeed;
 					FILHO[i].ALOCAMENTO_y=ALOCAMENTO_y+vspeed;
 				speed=speed_;
@@ -54,5 +57,18 @@
 			
 			FILHO[i].ALOCAMENTO_speed=ALOCAMENTO_speed;
 			
-			FILHO[i].ALOCAMENTO_delay=i*20;
+			FILHO[i].ALOCAMENTO_status=20;
 		}
+		
+		//Lançamento:
+		LANCAMENTO_FILHO=0;
+		var ANGULO_DIFERENCA = point_direction(x,y,FILHO[LANCAMENTO_FILHO].ALOCAMENTO_x,FILHO[LANCAMENTO_FILHO].ALOCAMENTO_y)
+		if (ANGULO_DIFERENCA>270) {ANGULO_DIFERENCA-=360;}
+		LANCAMENTO_ANGULO_ADD=(ANGULO_DIFERENCA-image_angle)/FILHO[LANCAMENTO_FILHO].ALOCAMENTO_status;
+		
+		
+		
+		
+		//Countdown Reposição
+		COUNTDOWN_REPOSICAO = 0;
+		

@@ -6,7 +6,7 @@
     "path": "folders/GAME/NAVES/Scripts.yy",
   },
   "resourceVersion": "1.0",
-  "name": "SETUP_ATIRADORES",
+  "name": "SETUP_NAVES_ATIRADORES",
   "tags": [],
   "resourceType": "GMScript",
 }

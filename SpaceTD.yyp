@@ -66,7 +66,7 @@
     {"id":{"name":"spr_Atirador_Projetil","path":"sprites/spr_Atirador_Projetil/spr_Atirador_Projetil.yy",},"order":3,},
     {"id":{"name":"font_40px","path":"fonts/font_40px/font_40px.yy",},"order":0,},
     {"id":{"name":"Notch","path":"extensions/Notch/Notch.yy",},"order":1,},
-    {"id":{"name":"SETUP_ATIRADORES","path":"scripts/SETUP_ATIRADORES/SETUP_ATIRADORES.yy",},"order":6,},
+    {"id":{"name":"SETUP_NAVES_ATIRADORES","path":"scripts/SETUP_NAVES_ATIRADORES/SETUP_NAVES_ATIRADORES.yy",},"order":6,},
     {"id":{"name":"timer_sync_ini_all","path":"scripts/timer_sync_ini_all/timer_sync_ini_all.yy",},"order":1,},
     {"id":{"name":"Obj_Atirador","path":"objects/Obj_Atirador/Obj_Atirador.yy",},"order":0,},
     {"id":{"name":"spr_Circulo_Selecao","path":"sprites/spr_Circulo_Selecao/spr_Circulo_Selecao.yy",},"order":3,},
@@ -81,7 +81,7 @@
     {"id":{"name":"obj_Ads","path":"objects/obj_Ads/obj_Ads.yy",},"order":0,},
     {"id":{"name":"FuncoesTextos","path":"scripts/FuncoesTextos/FuncoesTextos.yy",},"order":7,},
     {"id":{"name":"FuncoesAds","path":"scripts/FuncoesAds/FuncoesAds.yy",},"order":1,},
-    {"id":{"name":"SETUP_TROPAS","path":"scripts/SETUP_TROPAS/SETUP_TROPAS.yy",},"order":7,},
+    {"id":{"name":"SETUP_NAVES_TROPAS","path":"scripts/SETUP_NAVES_TROPAS/SETUP_NAVES_TROPAS.yy",},"order":7,},
     {"id":{"name":"IAP_event","path":"scripts/IAP_event/IAP_event.yy",},"order":3,},
   ],
   "Options": [

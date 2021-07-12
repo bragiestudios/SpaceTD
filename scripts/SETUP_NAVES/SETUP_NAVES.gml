@@ -77,4 +77,3 @@ function setup_macros_naves(){
 
 }
 
-
