@@ -44,6 +44,33 @@
 			else
 			{
 				speed=0;
+				
+				
+
+					//ATIRAR:
+						if COUNTDOWN_ATAQUE>0 COUNTDOWN_ATAQUE--;
+	
+						if COUNTDOWN_ATAQUE<=0
+						{
+							COUNTDOWN_ATAQUE=RECARGA_ATAQUE;
+		
+							var projetil = instance_create_depth(x,y,depth,Obj_Atirador_Projetil);
+							projetil.speed=PROJETIL_INIMIGO_SPEED;
+							projetil.direction=image_angle;
+							projetil.DANO=DANO;
+							projetil.INIMIGO=COMBATENTE;
+							projetil.image_speed=0;
+		
+		
+							switch(INIMIGO_GENERICO)
+							{
+								case INIMIGO_GENERICO:
+									projetil.sprite_index=spr_Atirador_Projetil;
+									projetil.image_index =4;
+									break;
+							}
+						}
+				
 			}
 			
 				
@@ -55,6 +82,8 @@
 		else
 		{
 			y+=VELOCIDADE;
+			
+			image_angle+=(270-image_angle)/10;
 		}
 	
 

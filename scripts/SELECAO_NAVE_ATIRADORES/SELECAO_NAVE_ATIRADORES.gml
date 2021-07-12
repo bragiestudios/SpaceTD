@@ -60,7 +60,7 @@ function SELECAO_NAVE_ATIRADORES(sair_da_selecao){
 
 
 
-switch(inSELECAO_NAVE)
+	switch(inSELECAO_NAVE)
 	{
 		
 //***********************ELEMENTO NEUTRO***********************
@@ -157,7 +157,7 @@ switch(inSELECAO_NAVE)
 							draw_area_alcance_atirador(NAVE_ATIRADOR_2_TERRA)	break;
 							 
 						case SELECAO_NAVE_UP_ATIRADOR_1_AGUA_2_GELO:
-							draw_area_alcance_atirador(NAVE_ATIRADOR_2_GELO)	break;
+							draw_area_alcance_atirador(NAVE_EXTRA_2_GELO)	break;
 							 
 					}
 				
@@ -179,8 +179,8 @@ switch(inSELECAO_NAVE)
 					var check_click = draw_bt_SELECAO_NAVE(	/* POSIÇÃO GRAUS: */ -90+(120),
 															/* SELEÇÃO AÇÃO:  */ SELECAO_NAVE_UP_ATIRADOR_1_TERRA_2_GELO,
 															/* SUB-IMAGES:	  */ 45, 0, 6, 1,  // REFERENCIA EM: spr_bt_SELECAO_NAVE //
-															/* PRÓXIMA NAVE:  */ NAVE_ATIRADOR_2_GELO,
-															/* PREÇO AÇÃO:	  */ PRECO[NAVE_ATIRADOR_2_GELO],
+															/* PRÓXIMA NAVE:  */ NAVE_EXTRA_2_GELO,
+															/* PREÇO AÇÃO:	  */ PRECO[NAVE_EXTRA_2_GELO],
 															/* REQUER FUSÃO:  */ ds_stack_start(NAVE_CANHAO_1_AGUA));
 					 if check_click {sair_da_selecao=false;}
 				
@@ -276,7 +276,7 @@ switch(inSELECAO_NAVE)
 							draw_area_alcance_atirador(NAVE_ATIRADOR_2_AGUA)	break;
 							 
 						case SELECAO_NAVE_UP_ATIRADOR_1_AGUA_2_GELO:
-							draw_area_alcance_atirador(NAVE_ATIRADOR_2_GELO)	break;
+							draw_area_alcance_atirador(NAVE_EXTRA_2_GELO)	break;
 							 
 					}
 				
@@ -298,8 +298,8 @@ switch(inSELECAO_NAVE)
 					var check_click = draw_bt_SELECAO_NAVE(	/* POSIÇÃO GRAUS: */ -90+(120),
 															/* SELEÇÃO AÇÃO:  */ SELECAO_NAVE_UP_ATIRADOR_1_AGUA_2_GELO,
 															/* SUB-IMAGES:	  */ 45, 0, 6, 1,  // REFERENCIA EM: spr_bt_SELECAO_NAVE //
-															/* PRÓXIMA NAVE:  */ NAVE_ATIRADOR_2_GELO,
-															/* PREÇO AÇÃO:	  */ PRECO[NAVE_ATIRADOR_2_GELO],
+															/* PRÓXIMA NAVE:  */ NAVE_EXTRA_2_GELO,
+															/* PREÇO AÇÃO:	  */ PRECO[NAVE_EXTRA_2_GELO],
 															/* REQUER FUSÃO:  */ ds_stack_start(NAVE_CANHAO_1_TERRA));
 					 if check_click {sair_da_selecao=false;}
 				
@@ -397,7 +397,7 @@ switch(inSELECAO_NAVE)
 							draw_area_alcance_atirador(NAVE_ATIRADOR_2_FOGO)	break;
 							 
 						case SELECAO_NAVE_UP_ATIRADOR_1_FOGO_2_TESLA:
-							draw_area_alcance_atirador(NAVE_ATIRADOR_2_TESLA)	break;
+							draw_area_alcance_atirador(NAVE_EXTRA_2_TESLA)	break;
 							 
 					}
 				
@@ -419,8 +419,8 @@ switch(inSELECAO_NAVE)
 					var check_click = draw_bt_SELECAO_NAVE(	/* POSIÇÃO GRAUS: */ -90+(120),
 															/* SELEÇÃO AÇÃO:  */ SELECAO_NAVE_UP_ATIRADOR_1_FOGO_2_TESLA,
 															/* SUB-IMAGES:	  */ 47, 0, 6, 1,  // REFERENCIA EM: spr_bt_SELECAO_NAVE //
-															/* PRÓXIMA NAVE:  */ NAVE_ATIRADOR_2_TESLA,
-															/* PREÇO AÇÃO:	  */ PRECO[NAVE_ATIRADOR_2_TESLA],
+															/* PRÓXIMA NAVE:  */ NAVE_EXTRA_2_TESLA,
+															/* PREÇO AÇÃO:	  */ PRECO[NAVE_EXTRA_2_TESLA],
 															/* REQUER FUSÃO:  */ ds_stack_start(NAVE_CANHAO_1_AR));
 					 if check_click {sair_da_selecao=false;}
 				
@@ -519,7 +519,7 @@ switch(inSELECAO_NAVE)
 							draw_area_alcance_atirador(NAVE_ATIRADOR_2_FOGO)	break;
 							 
 						case SELECAO_NAVE_UP_ATIRADOR_1_AR_2_TESLA:
-							draw_area_alcance_atirador(NAVE_ATIRADOR_2_TESLA)	break;
+							draw_area_alcance_atirador(NAVE_EXTRA_2_TESLA)	break;
 							 
 					}
 				
@@ -541,8 +541,8 @@ switch(inSELECAO_NAVE)
 					var check_click = draw_bt_SELECAO_NAVE(	/* POSIÇÃO GRAUS: */ -90+(120),
 															/* SELEÇÃO AÇÃO:  */ SELECAO_NAVE_UP_ATIRADOR_1_AR_2_TESLA,
 															/* SUB-IMAGES:	  */ 47, 0, 6, 1,  // REFERENCIA EM: spr_bt_SELECAO_NAVE //
-															/* PRÓXIMA NAVE:  */ NAVE_ATIRADOR_2_TESLA,
-															/* PREÇO AÇÃO:	  */ PRECO[NAVE_ATIRADOR_2_TESLA],
+															/* PRÓXIMA NAVE:  */ NAVE_EXTRA_2_TESLA,
+															/* PREÇO AÇÃO:	  */ PRECO[NAVE_EXTRA_2_TESLA],
 															/* REQUER FUSÃO:  */ ds_stack_start(NAVE_CANHAO_1_FOGO));
 					 if check_click {sair_da_selecao=false;}
 				

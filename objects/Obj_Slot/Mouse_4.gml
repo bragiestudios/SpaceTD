@@ -19,6 +19,8 @@
 			}
 			else
 			{
+			
+				#region Atiradores
 //*********************************Atirador nível 0********************************
 					if NAVE_CONECTADA.TIPO_NAVE=NAVE_ATIRADOR_0
 						 inSELECAO_NAVE=SELECAO_NAVE_UP_ATIRADOR_0;
@@ -43,8 +45,36 @@
 						 inSELECAO_NAVE=SELECAO_NAVE_UP_ATIRADOR_2_FOGO;
 					if NAVE_CONECTADA.TIPO_NAVE=NAVE_ATIRADOR_2_TERRA
 						 inSELECAO_NAVE=SELECAO_NAVE_UP_ATIRADOR_2_TERRA;
+
+				#endregion Atiradores
+				
+				#region Tropas
+//*********************************Tropa nível 0********************************
+					if NAVE_CONECTADA.TIPO_NAVE=NAVE_TROPA_0
+						 inSELECAO_NAVE=SELECAO_NAVE_UP_TROPA_0;
 					
 					
+//*********************************Tropa nível 1********************************
+					if NAVE_CONECTADA.TIPO_NAVE=NAVE_TROPA_1_AGUA
+						 inSELECAO_NAVE=SELECAO_NAVE_UP_TROPA_1_AGUA;
+					if NAVE_CONECTADA.TIPO_NAVE=NAVE_TROPA_1_AR
+						 inSELECAO_NAVE=SELECAO_NAVE_UP_TROPA_1_AR;
+					if NAVE_CONECTADA.TIPO_NAVE=NAVE_TROPA_1_FOGO
+						 inSELECAO_NAVE=SELECAO_NAVE_UP_TROPA_1_FOGO;
+					if NAVE_CONECTADA.TIPO_NAVE=NAVE_TROPA_1_TERRA
+						 inSELECAO_NAVE=SELECAO_NAVE_UP_TROPA_1_TERRA;
+					
+//*********************************Tropa nível 2********************************
+					if NAVE_CONECTADA.TIPO_NAVE=NAVE_TROPA_2_AGUA
+						 inSELECAO_NAVE=SELECAO_NAVE_UP_TROPA_2_AGUA;
+					if NAVE_CONECTADA.TIPO_NAVE=NAVE_TROPA_2_AR
+						 inSELECAO_NAVE=SELECAO_NAVE_UP_TROPA_2_AR;
+					if NAVE_CONECTADA.TIPO_NAVE=NAVE_TROPA_2_FOGO
+						 inSELECAO_NAVE=SELECAO_NAVE_UP_TROPA_2_FOGO;
+					if NAVE_CONECTADA.TIPO_NAVE=NAVE_TROPA_2_TERRA
+						 inSELECAO_NAVE=SELECAO_NAVE_UP_TROPA_2_TERRA;
+						 
+				#endregion Tropas
 			}
 		
 	//Para evitar clique duplo:

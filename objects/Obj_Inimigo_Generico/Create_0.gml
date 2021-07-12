@@ -16,3 +16,14 @@
 		
 		
 		image_angle=270
+		
+		
+		COUNTDOWN_ATAQUE=0
+		RECARGA_ATAQUE=50
+		
+		PROJETIL_INIMIGO_SPEED=5
+		
+		DANO=5
+		
+		
+		TIPO_INIMIGO = INIMIGO_GENERICO;

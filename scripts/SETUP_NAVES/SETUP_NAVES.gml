@@ -67,12 +67,20 @@ function setup_macros_naves(){
 		
 	
 	//Extras:
-		#macro NAVE_EXTRA_2_TESLA		2.51
+		#macro NAVE_EXTRA_2_TESLA			2.51
 		#macro NAVE_EXTRA_2_GELO			2.52
 		
-		#macro NAVE_EXTRA_3_TESLA		3.51
+		#macro NAVE_EXTRA_3_TESLA			3.51
 		#macro NAVE_EXTRA_3_GELO			3.52
 	
+		
+		
+	
+	
+	//Inimigos:
+		#macro INIMIGO_GENERICO				10
+		
+		
 		
 
 }
