@@ -30,10 +30,10 @@ function SETUP_TROPA(tipo){
 				var VELOCIDADE_R_PADRAO_NIVEL_3 = 650;
 				
 			//Número de naves menores(FILHOS):
-				var N_NAVES_PADRAO_NIVEL_0 = 3;
-				var N_NAVES_PADRAO_NIVEL_1 = 3;
+				var N_NAVES_PADRAO_NIVEL_0 = 2;
+				var N_NAVES_PADRAO_NIVEL_1 = 2;
 				var N_NAVES_PADRAO_NIVEL_2 = 3;
-				var N_NAVES_PADRAO_NIVEL_3 = 3;
+				var N_NAVES_PADRAO_NIVEL_3 = 4;
 
 			//VIDA TROPA:
 				var VIDA_PADRAO_NIVEL_0 = 50;
@@ -250,6 +250,46 @@ function SETUP_TROPA(tipo){
 	}
 	
 
+	for(var i=0; i<N_FILHOS; i++)
+	{
+		SETUP_TROPA_FILHO(i)
+	}
+	
+	alarm[0]=1;
+
+}
+
+
+
+function SETUP_TROPA_FILHO(i)
+{
+	if instance_exists(FILHO[i])
+	{
+			
+		FILHO[i].TIPO_NAVE=TIPO_NAVE;
+			
+		FILHO[i].PROJETIL_TROPA_SPEED=PROJETIL_TROPA_SPEED;
+			
+		FILHO[i].VIDA=VIDA_FILHOS;
+		FILHO[i].DANO=DANO_FILHOS;
+		FILHO[i].COUNTDOWN_ATAQUE=RECARGA_ATAQUE_FILHOS;
+		FILHO[i].RECARGA_ATAQUE=RECARGA_ATAQUE_FILHOS;
+			
+		FILHO[i].VANTAGEM_ELEMENTAR=VANTAGEM_ELEMENTAR;
+		FILHO[i].DESVANTAGEM_ELEMENTAR=DESVANTAGEM_ELEMENTAR;
+			
+		FILHO[i].ELEMENTO=ELEMENTO;
+		
+			var speed_= speed;
+			var direction_= direction;
+			direction=((N_FILHOS==2)? 0 : 90)+((360/N_FILHOS)*i);
+			speed=max(30,N_FILHOS*10); //Raio
+				FILHO[i].ALOCAMENTO_x=ALOCAMENTO_x+hspeed;
+				FILHO[i].ALOCAMENTO_y=ALOCAMENTO_y+vspeed;
+			speed=speed_;
+			direction=direction_;
+			
+	}
 }
 
 

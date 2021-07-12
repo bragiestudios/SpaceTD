@@ -36,9 +36,19 @@
 				//Fim da fundição, ação:
 					if FUNDIR_ETAPAS=0
 					{
-						//Upgrade:
+						//FAZ O UPGRADE:
 						with(NAVE_CONECTADA)
-						{SETUP_ATIRADORE(other.FUNDIR_NAVE);}
+						{
+							switch(object_index)
+							{
+								case Obj_Atirador:
+								SETUP_ATIRADOR(other.FUNDIR_NAVE); break;
+											
+								case Obj_Tropa:
+								SETUP_TROPA(other.FUNDIR_NAVE); break;
+							}
+											
+						}
 						
 						//Custo:
 						GRANA-=FUNDIR_PRECO;

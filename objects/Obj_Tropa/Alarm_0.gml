@@ -8,34 +8,11 @@
 			{
 				FILHO[i]=instance_create_depth(x,y,depth+1,Obj_Tropa_Filhos);
 			
+				SETUP_TROPA_FILHO(i);
+				
 				FILHO[i].PAI=id;
 			
 				FILHO[i].FILHO_ID=i;
-			
-				FILHO[i].TIPO_NAVE=TIPO_NAVE;
-			
-				FILHO[i].PROJETIL_TROPA_SPEED=PROJETIL_TROPA_SPEED;
-			
-				FILHO[i].VIDA=VIDA_FILHOS;
-				FILHO[i].DANO=DANO_FILHOS;
-				FILHO[i].COUNTDOWN_ATAQUE=RECARGA_ATAQUE_FILHOS;
-				FILHO[i].RECARGA_ATAQUE=RECARGA_ATAQUE_FILHOS;
-			
-				FILHO[i].VANTAGEM_ELEMENTAR=VANTAGEM_ELEMENTAR;
-				FILHO[i].DESVANTAGEM_ELEMENTAR=DESVANTAGEM_ELEMENTAR;
-			
-				FILHO[i].ELEMENTO=ELEMENTO;
-			
-				
-					var speed_= speed;
-					var direction_= direction;
-					direction=90+((360/N_FILHOS)*i);
-					speed=N_FILHOS*10; //Raio
-						FILHO[i].ALOCAMENTO_x=ALOCAMENTO_x+hspeed;
-						FILHO[i].ALOCAMENTO_y=ALOCAMENTO_y+vspeed;
-					speed=speed_;
-					direction=direction_;
-				
 			
 				FILHO[i].ALOCAMENTO_speed=ALOCAMENTO_speed;
 			

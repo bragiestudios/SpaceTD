@@ -1,6 +1,6 @@
 
 
-function SETUP_ATIRADORE(tipo){
+function SETUP_ATIRADOR(tipo){
 
 	TIPO_NAVE=tipo
 	

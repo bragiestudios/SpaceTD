@@ -19,21 +19,22 @@
 		
 		ANGULO_PARADO = point_direction(x,y,ALOCAMENTO_x,ALOCAMENTO_y);  //[[[[[[ESCOLHER ISSO AQUI DEPOIS]]]]]]]]]
 		
-		//Contigura caracteristicas pelo tipo:
-		SETUP_TROPA(NAVE_TROPA_0)
-
-		//Genérico:
-			if id=inst_Tropa_Generica {exit;}
-		
-		
 		//Filhos
-			for(var i=0; i<N_FILHOS; i++)
+			for(var i=0; i<10; i++)
 			{FILHO[i]=noone;}
 			
 			alarm[0]=1;
 		
 			LANCAMENTO_FILHO=0;
 			LANCAMENTO_ANGULO_ADD=0;
+			
+		
+		//Contigura caracteristicas pelo tipo:
+		SETUP_TROPA(NAVE_TROPA_0)
+
+		//Genérico:
+			if id=inst_Tropa_Generica {exit;}
+		
 		
 		
 		

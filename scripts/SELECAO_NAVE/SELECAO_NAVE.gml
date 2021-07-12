@@ -457,7 +457,17 @@ function draw_bt_SELECAO_NAVE(	angulo,
 								{
 									//FAZ O UPGRADE:
 									with(NAVE_CONECTADA)
-									{SETUP_ATIRADORE(conteudo);}
+									{
+										switch(object_index)
+										{
+											case Obj_Atirador:
+											SETUP_ATIRADOR(conteudo); break;
+											
+											case Obj_Tropa:
+											SETUP_TROPA(conteudo); break;
+										}
+											
+									}
 									GRANA-=preco;
 								}
 								else
@@ -494,7 +504,7 @@ function draw_area_alcance_atirador(tipo_nave){
 	
 	
 	//Descobre o alcance:
-	with(inst_Atirador_Generico) {SETUP_ATIRADORE(tipo_nave);}
+	with(inst_Atirador_Generico) {SETUP_ATIRADOR(tipo_nave);}
 	var alcance_px_draw=inst_Atirador_Generico.ALCANCE_px;
 	var alcance_an_draw=inst_Atirador_Generico.ALCANCE_an;
 	

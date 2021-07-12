@@ -22,7 +22,7 @@
 	else
 	{
 		var DISTANCIA_DESITINO = point_distance(x,y,ALOCAMENTO_x,ALOCAMENTO_y)
-		if DISTANCIA_DESITINO>5
+		if DISTANCIA_DESITINO>2
 		{
 			direction=point_direction(x,y,ALOCAMENTO_x,ALOCAMENTO_y)
 			image_angle=direction
