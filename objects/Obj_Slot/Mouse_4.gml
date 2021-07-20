@@ -75,6 +75,22 @@
 						 inSELECAO_NAVE=SELECAO_NAVE_UP_TROPA_2_TERRA;
 						 
 				#endregion Tropas
+				
+				#region Suportes
+//*********************************Suportes********************************
+					if NAVE_CONECTADA.TIPO_NAVE=NAVE_SUPORTE_0
+						 inSELECAO_NAVE=SELECAO_NAVE_UP_SUPORTE_0;
+						 
+					if NAVE_CONECTADA.TIPO_NAVE=NAVE_SUPORTE_1
+						 inSELECAO_NAVE=SELECAO_NAVE_UP_SUPORTE_1;
+						 
+					if NAVE_CONECTADA.TIPO_NAVE=NAVE_SUPORTE_2
+						 inSELECAO_NAVE=SELECAO_NAVE_UP_SUPORTE_2;
+						 
+					if NAVE_CONECTADA.TIPO_NAVE=NAVE_SUPORTE_3
+						 inSELECAO_NAVE=SELECAO_NAVE_UP_SUPORTE_3;
+						 
+				#endregion Suportes
 			}
 		
 	//Para evitar clique duplo:

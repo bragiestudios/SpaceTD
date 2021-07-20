@@ -97,14 +97,51 @@
 						draw_set_alpha(1)
 					}
 					
+					//Se faço parte das opções de realocamento do suporte...
+					if REALOCAR_SUPORTE_ACAO=="|ACEITA|"
+					{
+						//Desenha que é uma opção para realocamento do suporte:
+						draw_set_color(c_white)
+						draw_set_alpha(.2)
+						draw_circle(x,y,85,false)
+						draw_set_alpha(1)
+					}
+					
 				}
 				
 				
 			//desenha a nave:
 				with(NAVE_CONECTADA)
 				{
+					if object_index=Obj_Suporte
+					{
+						with(FILHO[1]){ event_perform(ev_draw,0) }
+						with(FILHO[2]){ event_perform(ev_draw,0) }
+						with(FILHO[3]){ event_perform(ev_draw,0) }
+						with(FILHO[4]){ event_perform(ev_draw,0) }
+					}
+					
 					event_perform(ev_draw,0)
+					
+					/*
+					if object_index=Obj_Suporte
+					{
+						with(FILHO[1]){ event_perform(ev_draw,ev_draw_end) }
+						with(FILHO[2]){ event_perform(ev_draw,ev_draw_end) }
+						with(FILHO[3]){ event_perform(ev_draw,ev_draw_end) }
+						with(FILHO[4]){ event_perform(ev_draw,ev_draw_end) }
+					}*/
 				}
+				
+				with(Obj_Suporte_Filhos)
+				{
+					if SLOT_AJUDADO=other.id
+					{event_perform(ev_draw,ev_draw_end)}
+				}
+				
+				
+				//
+				 //draw_suporte();
 		}
 		
 		
@@ -127,3 +164,26 @@
 					depth=DEPTH;
 					break;
 		}
+		
+		
+		/*/
+			// DESENHA QUAL PEDRINHA VC TA DIRECIONANDO:
+			
+			if REALOCAR_SUPORTE_ACAO = "|PRINCIPAL|"
+			{
+				draw_text(obj_Camera.x,obj_Camera.y-yMEIO+100,"REALOCAR_SUPORTE_ETAPA: "+string(REALOCAR_SUPORTE_ETAPA))
+			
+				var PARTICULA_SUPORTE = NAVE_CONECTADA.FILHO[REALOCAR_SUPORTE_ETAPA];
+			
+				if PARTICULA_SUPORTE.ATIVO
+					draw_set_color(c_green);
+				else
+					draw_set_color(c_red);
+			
+				draw_set_alpha(.5)
+				draw_circle(PARTICULA_SUPORTE.x,PARTICULA_SUPORTE.y,5,false)
+				draw_set_alpha(1)
+			
+			}
+		//*/
+		

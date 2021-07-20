@@ -63,7 +63,7 @@ switch(inSELECAO_NAVE)
 						case SELECAO_NAVE_SLOT_VAZIO_CANHAO:
 							draw_sprite_ext(spr_Atirador_0,0,x   ,y,1,1,(x<obj_Camera.x) ? 0 : 180,-1,.3); break;
 						case SELECAO_NAVE_SLOT_VAZIO_SUPORTE:
-							draw_sprite_ext(spr_Atirador_0,0,x   ,y,1,1,(x<obj_Camera.x) ? 0 : 180,-1,.3); break;
+							draw_sprite_ext(spr_Suporte   ,0,x   ,y,1,1,(x<obj_Camera.x) ? 0 : 180,-1,.3); break;
 					}
 					
 				//Desenha Círculo de seleção:
@@ -79,7 +79,7 @@ switch(inSELECAO_NAVE)
 					var check_click = draw_bt_SELECAO_NAVE(225,SELECAO_NAVE_SLOT_VAZIO_CANHAO	,16,0,12,1,noone		,PRECO[NAVE_CANHAO_0]	,noone);
 					 if check_click {sair_da_selecao=false;}
 				//Suporte:
-					var check_click = draw_bt_SELECAO_NAVE(315,SELECAO_NAVE_SLOT_VAZIO_SUPORTE	,14,0,10,1,noone		,PRECO[NAVE_SUPORTE_0]	,noone);
+					var check_click = draw_bt_SELECAO_NAVE(315,SELECAO_NAVE_SLOT_VAZIO_SUPORTE	,14,0,10,1,Obj_Suporte	,PRECO[NAVE_SUPORTE_0]	,noone);
 					 if check_click {sair_da_selecao=false;}
 					 
 		

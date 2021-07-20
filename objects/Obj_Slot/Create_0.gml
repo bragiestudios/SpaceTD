@@ -26,3 +26,7 @@
 			FUNDIR_PRECO	= 0;
 			FUNDIR_NAVE		= 0;
 			FUNDIR_ETAPAS	= 0;
+			
+		//Realocar Suporte:
+			REALOCAR_SUPORTE_ACAO	= ""
+			REALOCAR_SUPORTE_ETAPA	= 1;

@@ -26,13 +26,24 @@
 		setup_macros_naves()
 		
 	//ELEMENTOS:
-		#macro ELEMENTO_NEUTRO	0
-		#macro ELEMENTO_AGUA	1
-		#macro ELEMENTO_AR		2
-		#macro ELEMENTO_FOGO	3
-		#macro ELEMENTO_TERRA	4
-		#macro ELEMENTO_TESLA	5
-		#macro ELEMENTO_GELO	6
+		#macro ELEMENTO_NEUTRO		0
+		#macro ELEMENTO_AGUA		1
+		#macro ELEMENTO_AR			2
+		#macro ELEMENTO_FOGO		3
+		#macro ELEMENTO_TERRA		4
+		#macro ELEMENTO_TESLA		5
+		#macro ELEMENTO_GELO		6
+		#macro ELEMENTO_FERVE		7
+		#macro ELEMENTO_PEDRA		8
+		#macro ELEMENTO_MULTIRAO	9
+		#macro ELEMENTO_ESCUDO		10
+		#macro ELEMENTO_ATAQUE		11
+		#macro ELEMENTO_LAVA		12
+		#macro ELEMENTO_CHUVA		13
+		#macro ELEMENTO_FURACAO		14
+		
+		
+		
 		
 		
 	

@@ -274,6 +274,7 @@ function draw_and_check_opcoes_SELECAO_NAVE(){
 		sair_da_selecao = SELECAO_NAVE_SLOT(sair_da_selecao);
 		sair_da_selecao = SELECAO_NAVE_TROPAS(sair_da_selecao);
 		sair_da_selecao = SELECAO_NAVE_ATIRADORES(sair_da_selecao);
+		sair_da_selecao = SELECAO_NAVE_SUPORTES(sair_da_selecao);
 	
 
 
@@ -424,7 +425,42 @@ function draw_bt_SELECAO_NAVE(	angulo,
 			and point_in_circle(mouse_x,mouse_y,xx,yy,55)
 			{
 				//Ações do botão:
-					if !estou_selecionado
+					if conteudo=NAVE_REALOCAR_SUPORTE
+					{
+						//Prepara Slots para as ações de Realocar Suportes:
+						with(Obj_Slot)
+						{
+							//Perto:
+								if point_distance(x,y,other.x,other.y)<290	//Perto
+							//Possui uma nave conectada:
+								and instance_exists(NAVE_CONECTADA)
+								{
+									
+									//E minha nave conectada aceita bonus de suporte:
+										if NAVE_CONECTADA.object_index==Obj_Atirador
+										or NAVE_CONECTADA.object_index==Obj_Tropa
+										//or NAVE_CONECTADA.object_index==Obj_Canhao
+										{
+											 REALOCAR_SUPORTE_ACAO="|ACEITA|";
+										}
+								}
+							//Longe ou sem nave:
+								else
+								{
+									REALOCAR_SUPORTE_ACAO="|DESCARTADO|";
+								}
+						}
+									
+						//Contextualiza slot atual (princial) com as informações necessárias:
+						REALOCAR_SUPORTE_ACAO	= "|PRINCIPAL|"
+						REALOCAR_SUPORTE_ETAPA	= 1;
+									
+						//Informa globalmente que estamos em um processo de fundição:
+						inFUNDICAO=true;
+						
+						return false;
+					}
+					else if !estou_selecionado
 					{
 						//Me seleciona:
 						//Muda para o sub-menu onde temos mais informações sobre o que é a tropa
@@ -465,6 +501,9 @@ function draw_bt_SELECAO_NAVE(	angulo,
 											
 											case Obj_Tropa:
 											SETUP_TROPA(conteudo); break;
+											
+											case Obj_Suporte:
+											SETUP_SUPORTE(conteudo); break;
 										}
 											
 									}

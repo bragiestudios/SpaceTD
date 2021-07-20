@@ -3,6 +3,7 @@
 function setup_macros_naves(){
 	
 		#macro NAVE_VENDA					0
+		#macro NAVE_REALOCAR_SUPORTE		-1
 		
 	//Suporte:
 		#macro NAVE_SUPORTE_0				0.4
